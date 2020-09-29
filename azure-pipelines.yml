@@ -70,6 +70,9 @@ stages:
         publishWebProjects: false
         arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
         zipAfterPublish: true
+        
+    - task: WhiteSource Bolt@20
+      displayName: 'Run WhiteSource Bolt'
 
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: drop
