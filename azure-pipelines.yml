@@ -171,7 +171,7 @@ stages:
               sourceSlot: 'swap'
               targetSlot: 'production'
               action: 'Swap Slots''
-  - job: RunLoadTests
+- job: RunLoadTests
     dependsOn: Deploy
     displayName: 'Run load tests'
     pool:
